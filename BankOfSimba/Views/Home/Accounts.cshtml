@@ -1,0 +1,41 @@
+﻿@model System.Collections.Generic.List<BankOfSimba.Models.Client>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Bank of Simba</title>
+    <link rel="stylesheet" type="text/css" href="~/style.css">
+</head>
+<body>
+    <table style="width:50%">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animal</th>
+            <th>The owner is</th>
+        </tr>
+        @foreach (var account in @Model)
+        {
+        <tr>
+            <td>@(Model.IndexOf(account) + 1)</td>
+            <td>@account.Name</td>
+            <td>@account.Balance.ToString("N2")  @account.Currency</td>
+            <td>@account.AnimalType</td>
+            @if (@account.King == true)
+            {
+                <td id="king">The King</td>
+            }
+        </tr>
+        }
+    </table>
+    <br />   
+    <form action="/form" method="get">
+        <button type="submit">Add Account</button>
+    </form><br>
+    <form action="/bank" method="delete">
+        Name: <input type="text" name="name">
+        <button type="submit">Delete Account</button>
+    </form>    
+
+</body>
+</html>

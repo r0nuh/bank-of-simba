@@ -1,0 +1,18 @@
+﻿@model BankOfSimba.Models.Client
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Simba</title>
+</head>
+<body>
+
+    <p>Name: @Model.Name</p>
+    <p>Balance: @Model.Balance.ToString("N2")  @Model.Currency</p>
+    <p>Animal: @Model.AnimalType</p>
+
+    <form action="/bank" method="get">
+        <button type="submit">Let's see the Accounts</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿body {
+   
+}
+th {
+    text-align: left;
+}
+td#king {
+    background-color:darkgreen;
+    color: gold;
+    font-size:large;
+    font-weight:800;
+    text-align: center;
+    padding-left: 0.5em;
+}
