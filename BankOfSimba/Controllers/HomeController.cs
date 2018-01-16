@@ -63,7 +63,7 @@ namespace BankOfSimba.Controllers
             return RedirectToAction("Accounts");
         }
 
-        [HttpDelete("bank")]
+        [HttpPost("bank")]
         public IActionResult DeleteAccount(string name)
         {
             BankAccounts.Remove(BankAccounts.First(x => x.Name.Equals(name)));

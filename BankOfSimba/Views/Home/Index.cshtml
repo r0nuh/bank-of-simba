@@ -3,16 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Simba</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <div class="page-header">
+                <h1>Bank of Simba</h1>
+            </div>
+            <p>Name: @Model.Name</p>
+            <p>Balance: @Model.Balance.ToString("N2")  @Model.Currency</p>
+            <p>Animal: @Model.AnimalType</p>
 
-    <p>Name: @Model.Name</p>
-    <p>Balance: @Model.Balance.ToString("N2")  @Model.Currency</p>
-    <p>Animal: @Model.AnimalType</p>
-
-    <form action="/bank" method="get">
-        <button type="submit">Let's see the Accounts</button>
-    </form>
-
+            <form action="/bank" method="get">
+                <button type="submit" class="btn btn-primary btn-lg">Let's see the Accounts</button>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
